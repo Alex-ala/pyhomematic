@@ -316,6 +316,7 @@ class IPThermostatWall230V(HMThermostat):
         self.WRITENODE.update({"SET_POINT_TEMPERATURE": [1]})
         self.ACTIONNODE.update({"BOOST_MODE": [1]})
         self.ATTRIBUTENODE.update({"SET_POINT_MODE": [1]})
+        self.BINARYNODE.update({"STATE": [10]})
 
     def get_set_temperature(self):
         """ Returns the current target temperature. """
