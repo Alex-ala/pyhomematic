@@ -159,11 +159,11 @@ class HelperActorLevel(HMDevice):
         """Seek a specific value by specifying a float() from 0.0 to 1.0."""
         try:
             position = float(position)
+            LOG.debug("SetLevel Cover: %s" % position)
         except Exception as err:
             LOG.debug("HelperLevel.set_level: Exception %s" % (err,))
             return False
 
-        LOG.info("Set cover level to " + str(position))
         self.writeNodeData("LEVEL", position, channel)
 
 class HelperActorBlindTilt(HMDevice):
@@ -185,6 +185,7 @@ class HelperActorBlindTilt(HMDevice):
         """Seek a specific value by specifying a float() from 0.0 to 1.0."""
         try:
             position = float(position)
+            LOG.debug("SetLevel2 Cover: %s" % position)
         except Exception as err:
             LOG.debug("HelperActorBlindTilt.set_level_2: Exception %s" % (err,))
             return False
@@ -195,8 +196,6 @@ class HelperActorBlindTilt(HMDevice):
 
         # set level after level_2 to have level_2 updated
         self.writeNodeData("LEVEL", level, channel)
-        LOG.info("Setting cover level to "+ str(position))
-        LOG.info("Setting cover level2 to "+ str(level))
 
 
 class HelperActionOnTime(HMDevice):
