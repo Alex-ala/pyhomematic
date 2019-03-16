@@ -194,7 +194,7 @@ class Switch(GenericSwitch, HelperWorking, HelperRssiPeer):
     """
     @property
     def ELEMENT(self):
-        if "LC-Sw2" in self.TYPE:
+        if "LC-Sw2" in self.TYPE or "Sec-SFA-SM" in self.TYPE:
             return [1, 2]
         elif "LC-Sw4" in self.TYPE:
             return [1, 2, 3, 4]
@@ -309,8 +309,9 @@ class KeyMatic(HMActor, HelperActorState, HelperRssiPeer):
 
         # init metadata
         self.ACTIONNODE.update({"OPEN": self.ELEMENT})
-        self.BINARYNODE.update({"STATE_UNCERTAIN": self.ELEMENT})
-        self.SENSORNODE.update({"ERROR": self.ELEMENT})
+        self.ATTRIBUTENODE.update({"STATE_UNCERTAIN": self.ELEMENT,
+                                   "ERROR": self.ELEMENT,
+                                   "LOWBAT": [0]})
 
     def is_unlocked(self, channel=None):
         """ Returns True if KeyMatic is unlocked. """
@@ -680,6 +681,7 @@ DEVICETYPES = {
     "HM-MOD-Re-8": Switch,
     "IT-Switch": Switch,
     "REV-Ritter-Switch": Switch,
+    "HM-Sec-SFA-SM": Switch,
     "HM-ES-PMSw1-Pl": SwitchPowermeter,
     "HM-ES-PMSw1-Pl-DN-R1": SwitchPowermeter,
     "HM-ES-PMSw1-Pl-DN-R2": SwitchPowermeter,

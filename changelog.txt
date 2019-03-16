@@ -1,3 +1,12 @@
+Version 0.1.58 (2019-03-12)
+- KeyMatic, add LOWBAT, move STATE_UNCERTAIN & ERROR to attributes (Issue #229) @danielperna84
+- Remove LOWBAT for specific motion detectors & Thermostats (Issue #230) @danielperna84
+- Remove SABOTAGE from some HmIP shutter contacts (Issue #230) @danielperna84
+
+Version 0.1.57 (2019-03-02)
+- Fix/add support for HmIP-WTH & HmIP-WTH-2 (Issue #223) @DieterChmod
+- Add support for HM-Sec-SFA-SM @danielperna84
+
 Version 0.1.56 (2019-02-19)
 - Remove SABOTAGE from HmIP-SMO(-A) (Issue #212) @danielperna84
 - Fix resolving names with JSON with SSL @danielperna84
@@ -8,7 +17,7 @@ Version 0.1.56 (2019-02-19)
 
 Version 0.1.55 (2019-01-24)
 - Add support for HmIP-MIOB @danielperna84
-- Add suppoer for HmIP-BSL @danielperna84
+- Add support for HmIP-BSL @danielperna84
 - Add support for HmIP-SWD @danielperna84
 - Add support for HmIP-BRC2 @hg8496
 - Add support for HmIP-KRC4 @l-mb
