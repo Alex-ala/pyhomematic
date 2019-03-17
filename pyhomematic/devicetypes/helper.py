@@ -163,7 +163,7 @@ class HelperActorLevel(HMDevice):
         except Exception as err:
             LOG.debug("HelperLevel.set_level: Exception %s" % (err,))
             return False
-
+        Log.info('HM: Set cover level to ' + str(position))
         self.writeNodeData("LEVEL", position, channel)
 
 class HelperActorBlindTilt(HMDevice):
@@ -192,6 +192,7 @@ class HelperActorBlindTilt(HMDevice):
 
         level = self.getWriteData("LEVEL", channel)
 
+        LOG.info('HM: Set cover tilt to ' + str(position))
         self.writeNodeData("LEVEL_2", position, channel)
 
         # set level after level_2 to have level_2 updated

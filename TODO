@@ -1,0 +1,14 @@
+2019-03-17 07:20:18 WARNING (SyncWorker_3) [pyhomematic.devicetypes.generic] HMGeneric.getValue: OPERATING_VOLTAGE on 0017D709AE2F48:0 Exception: <Fault -5: 'Unknown Parameter value for value key: OPERATING_VOLTAGE'>
+2019-03-17 07:20:18 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: OPERATING_VOLTAGE on 0017D709AE2F48:0 Exception: <Fault -5: 'Unknown Parameter value for value key: OPERATING_VOLTAGE'>
+2019-03-17 07:20:18 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: OPERATING_VOLTAGE on 0017D709AE2F48:0 Exception: <Fault -5: 'Unknown Parameter value for value key: OPERATING_VOLTAGE'>
+2019-03-17 07:20:19 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: OPERATING_VOLTAGE on 000A58A9AC3C02:0 Exception: <Fault -5: 'Unknown Parameter for value key: OPERATING_VOLTAGE'>
+2019-03-17 07:20:19 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: OPERATING_VOLTAGE on 0017D709AE2F48:0 Exception: <Fault -5: 'Unknown Parameter value for value key: OPERATING_VOLTAGE'>
+2019-03-17 07:20:19 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: OPERATING_VOLTAGE on 0017D709AE2F48:0 Exception: <Fault -5: 'Unknown Parameter value for value key: OPERATING_VOLTAGE'>
+2019-03-17 07:20:20 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C503B:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
+2019-03-17 07:20:20 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C503E:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
+2019-03-17 07:20:20 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C502F:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
+2019-03-17 07:20:21 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C5046:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
+2019-03-17 07:20:21 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C4D22:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
+2019-03-17 07:20:21 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C5042:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
+2019-03-17 07:20:21 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C5077:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
+2019-03-17 07:20:21 WARNING (SyncWorker_4) [pyhomematic.devicetypes.generic] HMGeneric.getValue: WORKING on 001397099C5053:4 Exception: <Fault -5: 'Unknown Parameter for value key: WORKING'>
