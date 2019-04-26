@@ -314,7 +314,9 @@ class IPThermostatWall230V(HMThermostat):
         self.SENSORNODE.update({"ACTUAL_TEMPERATURE": [1],
                                 "HUMIDITY": [1]})
         self.WRITENODE.update({"SET_POINT_TEMPERATURE": [1]})
-        self.ACTIONNODE.update({"BOOST_MODE": [1]})
+        self.ACTIONNODE.update({"BOOST_MODE": [1],
+                                "AUTO_MODE": [1],
+                                "MANU_MODE": [1]})
         self.ATTRIBUTENODE.update({"SET_POINT_MODE": [1]})
         self.BINARYNODE.update({"STATE": [10]})
 
@@ -355,6 +357,7 @@ class IPThermostatWall2(HMThermostat, IPAreaThermostat, HelperLowBatIP):
                                    "OPERATING_VOLTAGE": [0],
                                    "SET_POINT_MODE": [1],
                                    "BOOST_MODE": [1]})
+        self.BINARYNODE.update({"STATE": [10]})
 
     def get_set_temperature(self):
         """ Returns the current target temperature. """
@@ -419,7 +422,7 @@ DEVICETYPES = {
     "HMIP-WTH-2": IPThermostatWall2,
     "HMIP-WTH": IPThermostatWall2,
     "HmIP-WTH": IPThermostatWall2,
-    "HmIP-BWTH": IPThermostatWall230V,
+    "HmIP-BWTH": IPThermostatWall2,
     "HmIP-BWTH24": IPThermostatWall230V,
     "HmIP-HEATING": IPThermostat,
 }
