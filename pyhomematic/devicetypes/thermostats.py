@@ -302,7 +302,7 @@ class IPThermostatWall(HMThermostat, HelperLowBatIP):
         """ Turn off Thermostat. """
         self.writeNodeData("SET_POINT_TEMPERATURE", self.OFF_VALUE)
 
-class IPThermostatWall230V(HMThermostat, IPAreaThermostat):
+class IPThermostatWall230V(HMThermostat, AreaThermostat):
     """
     HmIP-BWTH
     ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
