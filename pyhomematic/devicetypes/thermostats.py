@@ -302,7 +302,7 @@ class IPThermostatWall(HMThermostat, HelperLowBatIP):
         """ Turn off Thermostat. """
         self.writeNodeData("SET_POINT_TEMPERATURE", self.OFF_VALUE)
 
-class IPThermostatWall230V(HMThermostat):
+class IPThermostatWall230V(HMThermostat, IPAreaThermostat):
     """
     HmIP-BWTH
     ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
@@ -314,8 +314,12 @@ class IPThermostatWall230V(HMThermostat):
         self.SENSORNODE.update({"ACTUAL_TEMPERATURE": [1],
                                 "HUMIDITY": [1]})
         self.WRITENODE.update({"SET_POINT_TEMPERATURE": [1]})
-        self.ACTIONNODE.update({"BOOST_MODE": [1]})
-        self.ATTRIBUTENODE.update({"SET_POINT_MODE": [1]})
+        self.ACTIONNODE.update({"BOOST_MODE": [1],
+                                "AUTO_MODE": [1],
+                                "MANU_MODE": [1]})
+        self.ATTRIBUTENODE.update({"SET_POINT_MODE": [1],
+                                   "BOOST_MODE": [1]})
+        self.BINARYNODE.update({"STATE": [10]})
 
     def get_set_temperature(self):
         """ Returns the current target temperature. """
