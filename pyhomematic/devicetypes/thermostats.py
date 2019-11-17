@@ -333,6 +333,7 @@ class IPThermostatWall230V(HMThermostat, AreaThermostat):
         self.ATTRIBUTENODE.update({"SET_POINT_MODE": [1],
                                    "BOOST_MODE": [1],
                                    "STATE": [10]})
+        self.BINARYNODE.update({"STATE": [10]})
 
     @property
     def MODE(self):
