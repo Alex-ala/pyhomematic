@@ -9,8 +9,7 @@ LOG = logging.getLogger(__name__)
 class HMThermostat(HMDevice):
     """
     HM-CC-RT-DN, HM-CC-RT-DN-BoM
-    ClimateControl-RadiatorThermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-RadiatorThermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -127,8 +126,7 @@ class ThermostatGroup(HMThermostat):
 class Thermostat(HMThermostat, HelperBatteryState, HelperValveState, HelperRssiPeer, HelperLowBat):
     """
     HM-CC-RT-DN, HM-CC-RT-DN-BoM
-    ClimateControl-Radiator Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Radiator Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -150,8 +148,7 @@ class Thermostat(HMThermostat, HelperBatteryState, HelperValveState, HelperRssiP
 class ThermostatWall(HMThermostat, AreaThermostat, HelperBatteryState, HelperRssiPeer, HelperLowBat):
     """
     HM-TC-IT-WM-W-EU
-    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -173,8 +170,7 @@ class ThermostatWall(HMThermostat, AreaThermostat, HelperBatteryState, HelperRss
 class ThermostatWall2(HMThermostat, AreaThermostat):
     """
     HM-CC-TC
-    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -188,8 +184,7 @@ class ThermostatWall2(HMThermostat, AreaThermostat):
 class MAXThermostat(HMThermostat, HelperLowBat, HelperValveState):
     """
     BC-RT-TRX-CyG, BC-RT-TRX-CyG-2, BC-RT-TRX-CyG-3, BC-RT-TRX-CyG-4
-    ClimateControl-Radiator Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Radiator Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -204,12 +199,10 @@ class MAXThermostat(HMThermostat, HelperLowBat, HelperValveState):
                                    "CONTROL_MODE": [1],
                                    "VALVE_STATE": [1]})
 
-
 class MAXWallThermostat(HMThermostat, HelperLowBat):
     """
     BC-TC-C-WM-4
-    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -222,12 +215,10 @@ class MAXWallThermostat(HMThermostat, HelperLowBat):
                                 "BOOST_MODE": [1]})
         self.ATTRIBUTENODE.update({"LOWBAT": [0], "CONTROL_MODE": [1]})
 
-
 class IPThermostat(HMThermostat, HelperLowBatIP, HelperValveState):
     """
     HPIM-eTRV
-    ClimateControl-Radiator Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Radiator Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -281,12 +272,10 @@ class IPThermostat(HMThermostat, HelperLowBatIP, HelperValveState):
         """ Turn off Thermostat. """
         self.writeNodeData("SET_POINT_TEMPERATURE", self.OFF_VALUE)
 
-
 class IPThermostatWall(HMThermostat, HelperLowBatIP):
     """
     HmIP-STHD
-    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -316,12 +305,10 @@ class IPThermostatWall(HMThermostat, HelperLowBatIP):
         """ Turn off Thermostat. """
         self.writeNodeData("SET_POINT_TEMPERATURE", self.OFF_VALUE)
 
-
 class IPThermostatWall230V(HMThermostat, AreaThermostat):
     """
     HmIP-BWTH
-    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
@@ -329,32 +316,13 @@ class IPThermostatWall230V(HMThermostat, AreaThermostat):
         # init metadata
         self.SENSORNODE.update({"ACTUAL_TEMPERATURE": [1],
                                 "HUMIDITY": [1]})
-        self.WRITENODE.update({"SET_POINT_TEMPERATURE": [1],
-                               "BOOST_TIME": [1]})
+        self.WRITENODE.update({"SET_POINT_TEMPERATURE": [1]})
         self.ACTIONNODE.update({"BOOST_MODE": [1],
-                                "SET_POINT_MODE": [1]})
+                                "AUTO_MODE": [1],
+                                "MANU_MODE": [1]})
         self.ATTRIBUTENODE.update({"SET_POINT_MODE": [1],
-                                   "BOOST_MODE": [1],
-                                   "STATE": [10]})
+                                   "BOOST_MODE": [1]})
         self.BINARYNODE.update({"STATE": [10]})
-
-    @property
-    def MODE(self):
-        """ Return mode. """
-        if self.getAttributeData("BOOST_MODE"):
-            return self.BOOST_MODE
-        else:
-            return self.getAttributeData("SET_POINT_MODE")
-
-    @MODE.setter
-    def MODE(self, setmode):
-        """ Set mode. """
-        if setmode == self.BOOST_MODE:
-            self.actionNodeData('BOOST_MODE', True)
-        elif setmode in [self.AUTO_MODE, self.MANU_MODE]:
-            if self.getAttributeData("BOOST_MODE"):
-                self.actionNodeData('BOOST_MODE', False)
-            self.actionNodeData('CONTROL_MODE', setmode)
 
     def get_set_temperature(self):
         """ Returns the current target temperature. """
@@ -369,29 +337,14 @@ class IPThermostatWall230V(HMThermostat, AreaThermostat):
             return False
         self.writeNodeData("SET_POINT_TEMPERATURE", target_temperature)
 
-    def get_boost_time(self):
-        """ Returns the boost time"""
-        return self.getWriteData("BOOST_TIME")
-
-    def set_boost_time(self, boost_time):
-        """ Set the boost time"""
-        try:
-            boost_time = int(boost_time)
-        except Exception as err:
-            LOG.debug("Thermostat.set_boost_time: Exception %s" % (err,))
-            return False
-        self.writeNodeData("BOOST_TIME", boost_time)
-
     def turnoff(self):
         """ Turn off Thermostat. """
         self.writeNodeData("SET_POINT_TEMPERATURE", self.OFF_VALUE)
 
-
 class IPThermostatWall2(HMThermostat, IPAreaThermostat, HelperLowBatIP):
     """
     HmIP-WTH, HmIP-WTH-2
-    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature
-    or use some automatic mode.
+    ClimateControl-Wall Thermostat that measures temperature and allows to set a target temperature or use some automatic mode.
     """
     def __init__(self, device_description, proxy, resolveparamsets=False):
         super().__init__(device_description, proxy, resolveparamsets)
