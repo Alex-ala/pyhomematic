@@ -453,6 +453,10 @@ class RPCFunctions():
                             if i.get('address') in self.devices[remote]:
                                 self.devices[remote][
                                     i['address']].NAME = i['name']
+                                for channel_device_response in i['channels']:
+                                    name = channel_device_response['name']
+                                    self.devices_all[remote][channel_device_response['address']].NAME = name
+
                         except Exception as err:
                             LOG.warning(
                                 "RPCFunctions.addDeviceNames: Exception: %s" % str(err))
@@ -642,6 +646,7 @@ class ServerThread(threading.Thread):
                 LOG.warning("Failed connecting to proxy at http://%s:%i%s" %
                             (host['ip'], host['port'], host['path']))
                 LOG.debug("__init__: Exception: %s" % str(err))
+                # pylint: disable=raise-missing-from
                 raise Exception
             try:
                 host['type'] = BACKEND_UNKNOWN
